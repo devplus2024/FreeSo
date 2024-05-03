@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Acselis Sign Up - Pages
+    </title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script
+      src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  </head>
+  <body class="bg-black relative flex items-center h-screen">
+    <div class="absolute" style="z-index: -1;">
+        <img class="w-full" src="./src/Image/Default_Create_an_image_background_color_gradient_color_only_0.jpg" alt="">
+    </div>
+    <div
+      class="w-[30rem] relative h-[34rem] flex flex-col items-center gap-[6rem] rounded-lg mx-auto"
+      style="box-shadow: 0 0 0 1px var(--themed-border, transparent);backdrop-filter: blur(90px);">
+      <div
+        class="w-[34rem] h-full rounded-full absolute"></div>
+      <div class="flex flex-col gap-[1rem] justify-center items-center mt-12">
+        <svg width="50" height="61" xmlns="http://www.w3.org/2000/svg">
+          <!-- Define the gradient in the <defs> section -->
+          <defs>
+            <lineargradient id="gradient0" gradientUnits="objectBoundingBox"
+              x1="0" y1="0" x2="1" y2="1" spreadMethod="pad">
+              <stop stop-color="#ee0d0e" offset="0.210884347558022"
+                stop-opacity="1" />
+              <stop stop-color="#093be9" offset="0.380952388048172"
+                stop-opacity="1" />
+              <stop stop-color="#dd1e2e" offset="0.734693884849548"
+                stop-opacity="1" />
+            </lineargradient>
+          </defs>
+
+          <!-- Use the gradient and text -->
+          <text y="50"
+            style="letter-spacing:0; word-spacing:0; font-family:Big John; font-size:60; stroke-width:0; fill:url(#gradient0);">
+            A
+          </text>
+        </svg>
+      </div>
+      <div class="flex flex-col gap-6 items-center">
+        <div class="relative flex items-center">
+          <input
+            class="w-[24rem] h-[2rem] px-[3rem] py-5 rounded-md border"
+            type="text" id="email"
+            placeholder="Your Email Address"
+            autofocus />
+          <i
+            class="absolute px-2 text-black text-xl left-0 top-1/2 -translate-y-1/2 ti ti-mail"></i>
+        </div>
+        <div class="relative text-2xl flex items-center">
+          <input
+            class="w-[24rem] px-[3rem] h-[2rem] py-5 rounded-md"
+            type="text" id="username"
+            placeholder="Your Username" />
+          <i
+            class="ti ti-user absolute text-xl text-black px-2 left-0 top-1/2 -translate-y-1/2"></i>
+        </div>
+        <div class="relative flex items-center">
+          <input
+            class="w-[24rem] px-[3rem] py-5 h-[2rem] rounded-md"
+            type="password" id="password"
+            placeholder="Your Password"
+            autocomplete="hh" />
+          <i
+            class="ti ti-password text-black text-xl absolute px-2 left-0 top-1/2 -translate-y-1/2"></i>
+        </div>
+        <div class="flex flex-col  items-center gap-4" style="z-index: 2;">
+          <button class="text-white px-5 py-2 rounded-md"
+            style="box-shadow: 0 0 0 1px var(--themed-border, transparent)"
+            onclick="signup()">Sign Up</button>
+          <div class="flex gap-1">
+            <p class="text-white">You have an account?</p>
+            <a href="signup.html" class="text-red-500">Login</a>
+          </div>
+          <div  id="message" class="" style="color:rgb(0, 81, 255)"></div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
