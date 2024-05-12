@@ -76,7 +76,7 @@ function login() {
       );
       if (user) {
         document.getElementById("message").innerHTML = "Login successful!";
-        window.location.href = "/dashboard/index.html";
+        window.location.href = "/Admin/index.html";
       } else if (password == "" && email == "" && username == "") {
         document.getElementById("message").innerHTML =
           "Please enter your infomation";
@@ -145,31 +145,187 @@ fetch("/DataBase/database.json") // Đọc file JSON
     console.error("Lỗi khi đọc file JSON:", error);
   });
 
-  document.addEventListener("DOMContentLoaded", function() {
-    var scrollBtn = document.getElementById("scrollBtn");
-    var targetDiv = document.getElementById("targetDiv");
+document.addEventListener("DOMContentLoaded", function () {
+  var scrollBtn = document.getElementById("scrollBtn");
+  var targetDiv = document.getElementById("targetDiv");
 
-    scrollBtn.addEventListener("click", function() {
-        // Tính toán vị trí y của targetDiv
-        var targetY = targetDiv.getBoundingClientRect().top + window.pageYOffset;
+  scrollBtn.addEventListener("click", function () {
+    // Tính toán vị trí y của targetDiv
+    var targetY = targetDiv.getBoundingClientRect().top + window.pageYOffset;
 
-        // Tính toán khoảng cách để căn giữa theo trục y
-        var offsetY = targetY - ((window.innerHeight - targetDiv.offsetHeight) / 2);
+    // Tính toán khoảng cách để căn giữa theo trục y
+    var offsetY = targetY - (window.innerHeight - targetDiv.offsetHeight) / 2;
 
-        // Cuộn đến vị trí của targetDiv với căn giữa theo trục y
-        window.scrollTo({ top: offsetY, behavior: 'smooth' });
-    });
-});
-
-
-const options = document.querySelectorAll('input[type="radio"]');
-const optionContents = document.querySelectorAll('.option-content');
-
-options.forEach((option, index) => {
-  option.addEventListener('change', () => {
-    optionContents.forEach(content => {
-      content.classList.remove('show');
-    });
-    optionContents[index].classList.add('show');
+    // Cuộn đến vị trí của targetDiv với căn giữa theo trục y
+    window.scrollTo({ top: offsetY, behavior: "smooth" });
   });
 });
+
+const options = document.querySelectorAll('input[type="radio"]');
+const optionContents = document.querySelectorAll(".option-content");
+
+options.forEach((option, index) => {
+  option.addEventListener("change", () => {
+    optionContents.forEach((content) => {
+      content.classList.remove("show");
+    });
+    optionContents[index].classList.add("show");
+  });
+});
+
+var currentPartIndex = 1;
+var contentParts = document.querySelectorAll('.content-part');
+var showMoreButton = document.getElementById('show-more-button');
+
+showMoreButton.addEventListener('click', function() {
+    if (currentPartIndex < contentParts.length) {
+        contentParts[currentPartIndex].style.display = 'block';
+        
+        // Lấy tất cả các hình ảnh trong phần nội dung mới
+        var imagesInNewContent = contentParts[currentPartIndex].querySelectorAll('.lazy-img');
+
+        // Thêm lớp 'active' cho mỗi hình ảnh sau 1 giây
+        setTimeout(function() {
+            imagesInNewContent.forEach(function(image) {
+                image.classList.add('active');
+            });
+        }, 100); // 1 giây (1000ms) delay
+
+        currentPartIndex++;
+
+        if (currentPartIndex === contentParts.length) {
+            showMoreButton.textContent = 'No more content';
+        }
+    } else {
+        alert('No more content available.');
+    }
+});
+
+
+
+
+
+ function showbutton() {
+  var hiddenContent = document.getElementById("hiddenContent");
+  var product_active =document.getElementById("showButton");
+  if  (product_active.classList.contains("a__hover")) {
+    product_active.classList.remove("a__hover");
+    product_active.classList.add("p_active_vip");
+    hiddenContent.classList.remove("product_hidden_1");
+    hiddenContent.classList.add("product_block_1");
+  } 
+  else if  (product_active.classList.contains("p_active_vip")) {
+    product_active.classList.remove("p_active_vip");
+    product_active.classList.add("a__hover");
+    hiddenContent.classList.remove("product_block_1");
+    hiddenContent.classList.add("product_hidden_1");
+  } 
+ 
+};
+
+function show_profile() {
+var show_menu_languages_ft = document.getElementById("languages_show");
+ var show_menu_profiles = document.getElementById("profile_menu");
+ if (show_menu_profiles.classList.contains("hidden_1")){
+  show_menu_profiles.classList.remove("hidden_1");
+  show_menu_profiles.classList.add("block_1");
+  if (show_menu_languages_ft.classList.contains("block_1")){
+    show_menu_languages_ft.classList.remove("block_1");
+    show_menu_languages_ft.classList.add("hidden_1");
+  }
+ }
+ else if (show_menu_profiles.classList.contains("block_1")){
+  show_menu_profiles.classList.remove("block_1");
+  show_menu_profiles.classList.add("hidden_1");
+
+ }
+} 
+
+
+function show_menu_languages(){
+  var show_menu_languages_ft = document.getElementById("languages_show");
+ if (show_menu_languages_ft.classList.contains("hidden_1")){
+  show_menu_languages_ft.classList.remove("hidden_1");
+  show_menu_languages_ft.classList.add("block_1");
+ }
+ else if (show_menu_languages_ft.classList.contains("block_1")){
+  show_menu_languages_ft.classList.remove("block_1");
+  show_menu_languages_ft.classList.add("hidden_1");
+
+ }
+}
+
+function getValue() {
+  var inputValue = document.getElementById('input_id').value;
+
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'http://localhost:5000/get_input_value', true);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+          console.log('Đã gửi giá trị thành công.');
+      }
+  };
+  xhr.send(JSON.stringify({input_value: inputValue}));
+}
+
+console.log("Server VN")
+
+
+function getValue() {
+  var inputValue = document.getElementById('input_id').value;
+
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', '/get_input_value', true);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+          console.log('Đã gửi giá trị thành công.');
+      }
+  };
+  xhr.send(JSON.stringify({input_value: inputValue}));
+}
+
+
+
+function translateEnglishToVietnamese() {
+    // Định nghĩa một bộ từ điển địa phương
+    var dictionary = {
+      "Home": "Trang chủ",
+      "Pricing": "Giá",
+      "Contact": "Liên hệ",
+      // Thêm các cặp từ khác vào đây
+  };
+
+  // Hàm dịch văn bản từ tiếng Anh sang tiếng Việt
+  function translateEnglishToVietnamese(text) {
+      // Chia văn bản thành các từ
+      var words = text.split(" ");
+      // Duyệt qua từng từ
+      for (var i = 0; i < words.length; i++) {
+          // Nếu từ hiện tại có trong từ điển, thay thế bằng bản dịch
+          if (dictionary.hasOwnProperty(words[i].toLowerCase())) {
+              words[i] = dictionary[words[i].toLowerCase()];
+          }
+      }
+      // Trả về văn bản đã dịch
+      return words.join(" ");
+  }
+
+  // Hàm dịch văn bản trên trang web
+  function translateTextOnPage() {
+      var elements = document.querySelectorAll('*');
+      elements.forEach(function(element) {
+          if (element.nodeType === Node.TEXT_NODE && /[A-Za-z]/.test(element.nodeValue)) {
+              var text = element.nodeValue.trim();
+              if (text !== "") {
+                  element.nodeValue = translateEnglishToVietnamese(text);
+              }
+          }
+      });
+  }
+
+  window.onload = translateTextOnPage;
+}
+
+
