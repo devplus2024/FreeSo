@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var targetY = targetDiv.getBoundingClientRect().top + window.pageYOffset;
 
     // Tính toán khoảng cách để căn giữa theo trục y
-    var offsetY = targetY - (window.innerHeight - targetDiv.offsetHeight) / 2;
+    var offsetY = targetY - (window.innerHeight - targetDiv.offsetHeight) / 2 - 28;
 
     // Cuộn đến vị trí của targetDiv với căn giữa theo trục y
     window.scrollTo({ top: offsetY, behavior: "smooth" });
@@ -172,6 +172,8 @@ options.forEach((option, index) => {
     optionContents[index].classList.add("show");
   });
 });
+
+console.log(options);
 
 var currentPartIndex = 1;
 var contentParts = document.querySelectorAll('.content-part');

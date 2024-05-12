@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta property="og:image" content="https://developplus2024.github.io/FreeSo/src/Image/Default_Hacker_image_covered_in_black_shirt_with_no_face_visib_1.jpg">
+		<meta property="og:image" content="./src/Image/Default_Hacker_image_covered_in_black_shirt_with_no_face_visib_1.jpg">
 		<title>
 			Beyond - Home Page
 		</title>
@@ -34,8 +34,7 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Comfortaa:wght@300..700&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
 			rel="stylesheet">
-		<script src="https://cdn.jsdelivr.net/npm/microsoft-translator@3/dist/microsoft-translator.min.js"></script>
-        <link rel="image_src" href="./src/Image/Default_Hacker_image_covered_in_black_shirt_with_no_face_visib_1.jpg">
+			<script src="https://cdn.jsdelivr.net/npm/microsoft-translator@3/dist/microsoft-translator.min.js"></script>
 
 	</head>
 	<body class="h-screen relative"
@@ -102,12 +101,14 @@
 							<a href="feature.html" target="_blank" class="  cursor-pointer">Feature</a>
 						</div>
 						<div
-							class="relative cursor-pointer hover:text-sky-500 " onclick="showbutton()">
-							<p class="select-none  a__hover relative  "   id="showButton" >Product</p>
+							class="relative cursor-pointer hover:text-sky-500 " >
+							<p class="select-none  a__hover relative  "  onclick="showbutton()" id="showButton" >Product</p>
 					
 							<div id="hiddenContent"
 							     
-								 class="absolute  rounded-md  product_hidden_1  left-1/2 -translate-x-1/2 w-[500px] h-[300px]"></div>
+								 class="absolute  rounded-md  product_hidden_1  left-1/2 -translate-x-1/2 w-[500px] h-[300px]">
+								
+								</div>
 						</div>
 						<div class="a__hover relative hover:text-sky-500 cursor-pointer select-none">
 							<div class=" active_a_ absolute -bottom-[2px]"
@@ -209,7 +210,7 @@
 						</div>
 						<div class="absolute right-0 top-[4rem] hidden_1 " id="profile_menu">
 							<div
-								class="w-[13rem] flex gap-4 py-5 flex-col items-center rounded-lg  bg- select-none text-white"
+								class="w-[18rem] flex gap-4 py-5 flex-col items-center rounded-lg  bg- select-none text-white"
 								style="background-color:#272626;box-shadow: 0 0 0 1px var(--themed-border, transparent);backdrop-filter: blur(150px);">
 		
 								<div class="flex flex-col gap-[0.5rem] ">
@@ -217,35 +218,65 @@
 										<p class="px-2">Admin - Developer</p>
 									</div>
 									<div class="flex-col flex gap-[0.5rem] ">
-										<div class="flex gap-[1rem] rounded-md py-2 px-2 hover:bg-[#2e2e2e]" >
-											<svg class xmlns="http://www.w3.org/2000/svg" width="24"
-												height="24" viewBox="0 0 24 24" fill="currentColor"
-												class="icon icon-tabler icons-tabler-filled icon-tabler-user"><path
-													stroke="none" d="M0 0h24v24H0z" fill="none" /><path
-													d="M12 2a5 5 0 1 1 -5 5l.005 -.217a5 5 0 0 1 4.995 -4.783z" /><path
-													d="M14 14a5 5 0 0 1 5 5v1a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-1a5 5 0 0 1 5 -5h4z" /></svg>
-											<p class>Edit Profiles</p>
+										<div class="flex gap-[3rem] justify-between items-center rounded-md py-2 px-2 hover:bg-[#2e2e2e]" >
+											<div class="flex gap-2">
+												<svg class xmlns="http://www.w3.org/2000/svg" width="24"
+													height="24" viewBox="0 0 24 24" fill="currentColor"
+													class="icon icon-tabler icons-tabler-filled icon-tabler-user"><path
+														stroke="none" d="M0 0h24v24H0z" fill="none" /><path
+														d="M12 2a5 5 0 1 1 -5 5l.005 -.217a5 5 0 0 1 4.995 -4.783z" /><path
+														d="M14 14a5 5 0 0 1 5 5v1a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-1a5 5 0 0 1 5 -5h4z" /></svg>
+												<p class>Edit Profiles</p>
+											</div>
+											<div>
+												<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+											</div>
 										</div>
-										<div class="flex gap-[1rem] rounded-md py-2 px-2 hover:bg-[#2e2e2e] ">
-											<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-settings"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /></svg>
-											<p class>Setting</p>
+										<div class="flex gap-[3rem] justify-between rounded-md py-2 px-2 hover:bg-[#2e2e2e] ">
+											<div class="flex gap-2" >
+												<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-settings"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /></svg>
+												<p class>Setting</p>
+											</div>
+											<div>
+												<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+											</div>
 										</div>
-										<div class="flex gap-[1rem] rounded-md py-2 px-2 hover:bg-[#2e2e2e] ">
-											<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-message-2-question"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 9h8" /><path d="M8 13h6" /><path d="M14.5 18.5l-2.5 2.5l-3 -3h-3a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v4.5" /><path d="M19 22v.01" /><path d="M19 19a2.003 2.003 0 0 0 .914 -3.782a1.98 1.98 0 0 0 -2.414 .483" /></svg>
-											<p class>Feedback</p>
+										<div class="flex gap-[3rem] justify-between rounded-md py-2 px-2 hover:bg-[#2e2e2e] ">
+											<div class="flex gap-2">
+												<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-message-2-question"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 9h8" /><path d="M8 13h6" /><path d="M14.5 18.5l-2.5 2.5l-3 -3h-3a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v4.5" /><path d="M19 22v.01" /><path d="M19 19a2.003 2.003 0 0 0 .914 -3.782a1.98 1.98 0 0 0 -2.414 .483" /></svg>
+												<p class>Feedback</p>
+											</div>
+											<div>
+												<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+											</div>
 										</div>
-										<div class="flex gap-[1rem] rounded-md py-2 px-2 hover:bg-[#2e2e2e] ">
-											<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-moon-off"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7.962 3.949a8.97 8.97 0 0 1 4.038 -.957v.008h.393a7.478 7.478 0 0 0 -2.07 3.308m-.141 3.84c.186 .823 .514 1.626 .989 2.373a7.49 7.49 0 0 0 4.586 3.268m3.893 -.11c.223 -.067 .444 -.144 .663 -.233a9.088 9.088 0 0 1 -.274 .597m-1.695 2.337a9 9 0 0 1 -12.71 -12.749" /><path d="M3 3l18 18" /></svg>
-											<p class>Display</p>
+										<div class="flex gap-[3rem] justify-between rounded-md py-2 px-2 hover:bg-[#2e2e2e] ">
+											<div class="flex gap-2">
+												<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-moon-off"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7.962 3.949a8.97 8.97 0 0 1 4.038 -.957v.008h.393a7.478 7.478 0 0 0 -2.07 3.308m-.141 3.84c.186 .823 .514 1.626 .989 2.373a7.49 7.49 0 0 0 4.586 3.268m3.893 -.11c.223 -.067 .444 -.144 .663 -.233a9.088 9.088 0 0 1 -.274 .597m-1.695 2.337a9 9 0 0 1 -12.71 -12.749" /><path d="M3 3l18 18" /></svg>
+												<p class>Display</p>
+											</div>
+											<div>
+												<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+											</div>
 										</div>
-										<div class="flex gap-[1rem] rounded-md py-2 px-2 hover:bg-[#2e2e2e] ">
-											<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-help"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 17l0 .01" /><path d="M12 13.5a1.5 1.5 0 0 1 1 -1.5a2.6 2.6 0 1 0 -3 -4" /></svg>
-											<p class>Help & Support</p>
+										<div class="flex gap-[3rem] justify-between rounded-md py-2 px-2 hover:bg-[#2e2e2e] ">
+											<div class="flex gap-2">
+												<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-help"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 17l0 .01" /><path d="M12 13.5a1.5 1.5 0 0 1 1 -1.5a2.6 2.6 0 1 0 -3 -4" /></svg>
+												<p class>Help & Support</p>
+											</div >
+											<div>
+												<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+											</div>
 										</div>
 										<div class="flex relative gap-[1rem]    ">
-											<div class="hover:bg-[#2e2e2e] flex gap-[1rem] py-2 px-2  rounded-md w-full" onclick="show_menu_languages()">
-												<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-language"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 5h7" /><path d="M9 3v2c0 4.418 -2.239 8 -5 8" /><path d="M5 9c0 2.144 2.952 3.908 6.7 4" /><path d="M12 20l4 -9l4 9" /><path d="M19.1 18h-6.2" /></svg>
-												<p class>Languages</p>
+											<div class="hover:bg-[#2e2e2e] flex gap-[3rem] justify-between py-2 px-2  rounded-md w-full" onclick="show_menu_languages()">
+												<div class="flex gap-2">
+													<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-language"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 5h7" /><path d="M9 3v2c0 4.418 -2.239 8 -5 8" /><path d="M5 9c0 2.144 2.952 3.908 6.7 4" /><path d="M12 20l4 -9l4 9" /><path d="M19.1 18h-6.2" /></svg>
+													<p class>Languages</p>
+												</div>
+												<div>
+													<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+												</div>
 											</div>
 											<div id="languages_show"  class="bg-[#272626] hidden_1 flex flex-col justify-center items-center gap-3 left-[-138px] rounded-lg absolute w-[7rem] h-[5rem]">
 												<p onclick="translate_english()" class="" >English</p>
@@ -255,15 +286,21 @@
 
 											</div>
 										</div>
-										<div class="flex gap-[1rem] relative rounded-md py-2 px-2 hover:bg-[#2e2e2e] ">
-											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-												viewBox="0 0 24 24" fill="none" stroke="currentColor"
-												stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-												class="icon icon-tabler icons-tabler-outline icon-tabler-logout"><path
-													stroke="none" d="M0 0h24v24H0z" fill="none" /><path
-													d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" /><path
-													d="M9 12h12l-3 -3" /><path d="M18 15l3 -3" /></svg>
-											<p class>Log out</p>
+										<div class="flex gap-[3rem] justify-between relative rounded-md py-2 px-2 hover:bg-[#2e2e2e] ">
+											<div class="flex gap-2">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+													viewBox="0 0 24 24" fill="none" stroke="currentColor"
+													stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+													class="icon icon-tabler icons-tabler-outline icon-tabler-logout"><path
+														stroke="none" d="M0 0h24v24H0z" fill="none" /><path
+														d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" /><path
+														d="M9 12h12l-3 -3" /><path d="M18 15l3 -3" /></svg>
+												<p class>Log out</p>
+			
+											</div>
+											<div>
+												<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -277,7 +314,7 @@
 		</dic>
 		
 		<section>
-			<div class="flex mt-[9rem] justify-center h-[24rem]  gap-4 relative">
+			<div class="flex mt-[12rem] justify-center h-[24rem]  gap-4 relative">
 
 				<div class="flex gap-[5rem] flex-col justify-center items-center">
 					<div class="flex flex-col gap-[1rem] items-center">
@@ -333,7 +370,7 @@
 					</div>
 					<div>
 						<img class="rounded-lg"
-							src="./src/Image/Default_Create_an_image_about_learning_programming_white_7.jpg"
+							src="/src/Image/Default_Create_an_image_about_learning_programming_white_7.jpg"
 							alt>
 					</div>
 				</div>
@@ -422,7 +459,7 @@
 						the best fit for your learning needs and budget.</p>
 				</div>
 				<div class="flex justify-center pricing_div mt-[2rem] gap-8" id="targetDiv">
-					<div class="shadow-sm-versel w-[22rem] h-[36rem] ">
+					<div class="shadow-sm-versel relative w-[22rem] h-[36rem] backdrop-blur-sm bg-white/30  " style="overflow-x: hidden;">
 						<div class="flex flex-col  gap-5 items-center mt-6">
 							<h1 class=" font-bold">Basic</h1>
 							<p class=" px-1 text-center">Get started with our essential
@@ -466,9 +503,10 @@
 							<button class="bg-white px-4 py-2  rounded-md border">Get
 								Started</button>
 						</div>
+						<div class="absolute w-[8rem] h-[14rem] top-0" style="background-image: linear-gradient( to right , rgb(5, 43, 255) , #2cccff) ;filter:blur(140px);z-index:2;"></div>
 
 					</div>
-					<div class="shadow-sm-versel w-[22rem] h-[36rem] ">
+					<div class="shadow-sm-versel w-[22rem] h-[36rem] relative " style="overflow-x: hidden;"> 
 						<div class="flex flex-col gap-5 items-center mt-6">
 							<h1 class=" font-bold">Pro</h1>
 							<p class=" text-center">Unlock advanced features for a more
@@ -535,9 +573,10 @@
 							<button class="bg-white px-4 py-2  rounded-md border">Get
 								Started</button>
 						</div>
+						<div class="absolute w-[8rem] h-[14rem] top-0" style="background-image: linear-gradient( to right , rgb(5, 43, 255) , #2cccff) ;filter:blur(140px);z-index:2;"></div>
 
 					</div>
-					<div class="shadow-sm-versel w-[22rem] h-[36rem] ">
+					<div class="shadow-sm-versel w-[22rem] h-[36rem] relative " style="overflow-x: hidden;">
 						<div class="flex flex-col gap-5 items-center mt-6">
 							<h1 class=" font-bold">Enterprise</h1>
 							<p class=" text-center">Tailored solutions for teams and
@@ -614,6 +653,7 @@
 							<button class="bg-white px-4 py-2 border  rounded-md">Get
 								Started</button>
 						</div>
+						<div class="absolute w-[8rem] h-[14rem] top-0" style="background-image: linear-gradient( to right , rgb(5, 43, 255) , #2cccff) ;filter:blur(140px);z-index:3;"></div>
 					</div>
 
 				</div>
@@ -763,7 +803,7 @@
 
 			<div class="h-screen"></div>
 			<div
-				class="mt-[18rem] bg-slate-100 h-[4rem] flex items-center justify-around ">
+				class="mt-[18rem] bg-black h-[4rem] text-white flex items-center justify-around ">
 				<div><p>© 2024 Learning Platform. All rights reserved.</p></div>
 				<div class="flex gap-4">
 					<a href>Terms of Service</a>
