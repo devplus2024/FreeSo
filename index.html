@@ -45,10 +45,10 @@
 		</div>
 		<div class="fixed top-0  w-screen" style="z-index: 3;" >
 			<div
-				class="flex justify-center absolute w-full  gap-[4rem] py-3  items-center div_nav_flex "
+				class="flex sm:items-start  xl:justify-center xl:flex-row sm:flex-col md:flex-col   absolute w-full  gap-[4rem] py-3  xl:items-center div_nav_flex "
 				style="background-color: #ffffffcc;backdrop-filter: saturate(180%) blur(5px);z-index: 4;box-shadow: inset 0 -1px 0 0 #eaeaea;">
-				<div class="flex gap-[3rem] items-center relative">
-					<div class>
+				<div class="flex   gap-[3rem] items-center relative sm:ml-[3rem] xl:ml-0 md:ml-[3rem] lg:ml-[3rem]">
+					<div class="xl:inline-block md:hidden sm:hidden lg:hidden">
 						<a href="index.html" class="text-3xl">
 							<svg
 								class=" text-4xl p-px rounded"
@@ -67,72 +67,75 @@
 							</svg>
 						</a>
 					</div>
-					<div class="flex gap-[1rem] text-sm  "
+					<div class="gap-[1rem] text-sm  flex xl:flex-row sm:flex-col md:flex-col "
 						style="color: #000000;">
 						<div
-						    class="cursor-pointer"
-							style="background-image: linear-gradient(to right , rgb(0, 110, 255) , #2cccff);background-clip: text;color: transparent;">
-							<a href="index.html" class="font-bold select-none   ">Home</a>
+						    class="cursor-pointer xl:hidden md:block lg:block sm:block" onclick="show_menu_nav()">
+						
+							<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6l16 0" /><path d="M4 12l16 0" /><path d="M4 18l16 0" /></svg>
 						</div>
-	
-						<!-- <div class="a__hover relative hover:text-sky-500">
-							<div class=" active_a_ absolute -bottom-[2px]"
-								style="background-color: #ffffff;"></div>
-							<a href="pricing.html" target="_blank" class>Pricing</a>
-						</div> -->
-						<div class="a__hover relative hover:text-sky-500 select-none">
-							<div class=" active_a_ absolute -bottom-[2px]"
-								style="background-color: #ffffff;"></div>
-							<button id="scrollBtn" class="  cursor-pointer">Pricing</button>
-						</div>
-						<div class="a__hover relative hover:text-sky-500 cursor-pointer select-none">
-							<div class=" active_a_ absolute -bottom-[2px]"
-								style="background-color: #ffffff;"></div>
-							<a href="contact.html" target="_blank" class=" cursor-pointer">Contact</a>
-						</div>
-						<div class="a__hover relative hover:text-sky-500 cursor-pointer select-none">
-							<div class=" active_a_ absolute -bottom-[2px]"
-								style="background-color: #ffffff;"></div>
-							<a href="aboutus.html" target="_blank" class="  cursor-pointer select-none">ABoutUs</a>
-						</div>
-						<div class="a__hover relative hover:text-sky-500 cursor-pointer select-none">
-							<div class=" active_a_ absolute -bottom-[2px]"
-								style="background-color: #ffffff;"></div>
-							<a href="feature.html" target="_blank" class="  cursor-pointer">Feature</a>
-						</div>
-						<div
-							class="relative cursor-pointer hover:text-sky-500 " >
-							<p class="select-none  a__hover relative  "  onclick="showbutton()" id="showButton" >Product</p>
-					
-							<div id="hiddenContent"
-							     
-								 class="absolute  rounded-md  product_hidden_1  left-1/2 -translate-x-1/2 w-[500px] h-[300px]">
-								
+						<div class="gap-[1rem] text-sm  xl:flex xl:flex-row  md:flex-col sm:hidden" id="menu_nav">
+								<div
+									class="cursor-pointer"
+									style="background-image: linear-gradient(to right , rgb(0, 110, 255) , #2cccff);background-clip: text;color: transparent;">
+									<a href="index.html" class="font-bold select-none   ">Home</a>
 								</div>
-						</div>
-						<div class="a__hover relative hover:text-sky-500 cursor-pointer select-none">
-							<div class=" active_a_ absolute -bottom-[2px]"
-								style="background-color: #ffffff;">
-							</div>
-							<a href="blog.html" target="_blank"
-								class="  ">Blog</a>
-						</div>
-						<div class="a__hover relative hover:text-sky-500 cursor-pointer select-none" >
-							<div class=" active_a_ absolute -bottom-[2px]"
-								style="background-color: #ffffff;"></div>
-							<a href="exercise.html" target="_blank"
-							class="  cursor-pointer">Exercise</a>
-						</div>
-						<div class="a__hover relative hover:text-sky-500 cursor-pointer select-none">
-							<div class=" active_a_ absolute -bottom-[2px]"
-								style="background-color: #ffffff;"></div>
-							<a href="chatbox.html" target="_blank"
-							class="  cursor-pointer">ChatBox</a>
+			
+								
+								<div class="a__hover relative hover:text-sky-500 select-none">
+									<div class=" active_a_ absolute -bottom-[2px]"
+										style="background-color: #ffffff;"></div>
+									<button id="scrollBtn" class="  cursor-pointer">Pricing</button>
+								</div>
+								<div class="a__hover relative hover:text-sky-500 cursor-pointer select-none">
+									<div class=" active_a_ absolute -bottom-[2px]"
+										style="background-color: #ffffff;"></div>
+									<a href="contact.html" target="_blank" class=" cursor-pointer">Contact</a>
+								</div>
+								<div class="a__hover relative hover:text-sky-500 cursor-pointer select-none">
+									<div class=" active_a_ absolute -bottom-[2px]"
+										style="background-color: #ffffff;"></div>
+									<a href="aboutus.html" target="_blank" class="  cursor-pointer select-none">ABoutUs</a>
+								</div>
+								<div class="a__hover relative hover:text-sky-500 cursor-pointer select-none">
+									<div class=" active_a_ absolute -bottom-[2px]"
+										style="background-color: #ffffff;"></div>
+									<a href="feature.html" target="_blank" class="  cursor-pointer">Feature</a>
+								</div>
+								<div
+									class="relative cursor-pointer hover:text-sky-500 " >
+									<p class="select-none  a__hover relative  "  onclick="showbutton()" id="showButton" >Product</p>
+							
+									<div id="hiddenContent"
+										
+										class="absolute  rounded-md  product_hidden_1  left-1/2 -translate-x-1/2 w-[500px] h-[300px]">
+										
+										</div>
+								</div>
+								<div class="a__hover relative hover:text-sky-500 cursor-pointer select-none">
+									<div class=" active_a_ absolute -bottom-[2px]"
+										style="background-color: #ffffff;">
+									</div>
+									<a href="blog.html" target="_blank"
+										class="  ">Blog</a>
+								</div>
+								<div class="a__hover relative hover:text-sky-500 cursor-pointer select-none" >
+									<div class=" active_a_ absolute -bottom-[2px]"
+										style="background-color: #ffffff;"></div>
+									<a href="exercise.html" target="_blank"
+									class="  cursor-pointer">Exercise</a>
+								</div>
+								<div class="a__hover relative hover:text-sky-500 cursor-pointer select-none">
+									<div class=" active_a_ absolute -bottom-[2px]"
+										style="background-color: #ffffff;"></div>
+									<a href="chatbox.html" target="_blank"
+									class="  cursor-pointer">ChatBox</a>
+								</div>
 						</div>
 					</div>
 					
 				</div>
-				<div class="flex gap-2 items-center">
+				<div class="xl:flex lg:hidden  gap-2 xl:items-center  sm:hidden md:hidden   ">
 					<a href="https://www.facebook.com/profile.php?id=61554760410819">
 						<div class="flex gap-2 text-sm items-center   px-2 rounded-md"
 							>
@@ -183,7 +186,7 @@
 							</div>
 						</a>
 					</div>
-					<div class="flex gap-[20px] ">
+					<div class=" gap-[20px] xl:flex md:hidden sm:hidden lg:hidden  ">
 						<div
 							class="rounded-md  flex relative justify-center items-center">
 							<a href="login.html" class="flex justify-center" target="_blank">
@@ -204,7 +207,7 @@
 							</a>
 						</div>
 					</div>
-					<div class="cursor-pointer relative">
+					<div class="cursor-pointer relative xl:inline-block md:hidden sm:hidden lg:hidden">
 						<div class="rounded-full h-[2rem] w-[2rem]" onclick="show_profile()"
 							style="background-image: linear-gradient(blue , #2cccff);">
 						</div>
@@ -799,7 +802,12 @@
 				</div>
 					
 			</div>
-			
+			<div class="h-screen relative mt-[7rem]">
+				<div onclick="show_image_preview()" class="flex absolute justify-center mt-[7rem] cursor-pointer"><img class="rounded-lg" src="./src/Image/Default_Hacker_image_covered_in_black_shirt_with_no_face_visib_0 (3).jpg" alt=""></div>
+				<div class="absolute left-1/2 -translate-x-1/2 w-[56rem] mx-auto h-[500px] bg-black hidden" id="show_image_it">
+					<img class="rounded-lg h-[500px]" src="./src/Image/Default_Hacker_image_covered_in_black_shirt_with_no_face_visib_0 (3).jpg" alt="">
+				</div>
+			</div>
 
 			<div class="h-screen"></div>
 			<div
@@ -810,6 +818,7 @@
 					<a href>Privacy Policy</a>
 				</div>
 			</div>
+			
 
 		</section>
 		<script src="script.js"></script>

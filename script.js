@@ -257,6 +257,33 @@ function show_menu_languages(){
  }
 }
 
+
+function show_menu_nav() {
+  var menu_nav = document.getElementById("menu_nav")
+  if(menu_nav.classList.contains("sm:hidden")){
+    menu_nav.classList.remove("sm:hidden")
+    menu_nav.classList.add("sm:flex-col")
+    menu_nav.classList.add("sm:flex")
+  }
+  else if(menu_nav.classList.contains("sm:flex-col")){
+    menu_nav.classList.remove("sm:flex-col")
+    menu_nav.classList.remove("sm:flex")
+    menu_nav.classList.add("sm:hidden")
+  }
+}
+function show_image_preview() {
+  var show_image_it = document.getElementById("show_image_it")
+  if(show_image_it.classList.contains("hidden")){
+    show_image_it.classList.remove("hidden")
+    show_image_it.classList.add("block")
+  }
+  else if(show_image_it.classList.contains("block")){
+    show_image_it.classList.remove("block")
+    show_image_it.classList.add("hidden")
+  }
+}
+
+
 function getValue() {
   var inputValue = document.getElementById('input_id').value;
 
